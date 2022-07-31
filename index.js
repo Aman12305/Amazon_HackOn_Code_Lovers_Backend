@@ -13,12 +13,15 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
   })
 
+//this is endopint for send sms
 const {sender} = require('./controllers/sendSms');
 app.post('/sendsms',sender);
 
+//this is endopint for upload file
 const {uploadimage} = require('./controllers/uploadimage');
 app.post('/upload',uploadimage);
 
+//this is endopint for raise claim
 const {claim} = require('./controllers/claimverfication');
 app.post('/claim',claim);
 
